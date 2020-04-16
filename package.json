@@ -2,7 +2,7 @@
   "name": "ts-react-sandbox",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://eric-hu.github.io/ts-react-sandbox/docs",
+  "homepage": "https://eric-hu.github.io/ts-react-sandbox",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
