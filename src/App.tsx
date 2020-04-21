@@ -4,7 +4,9 @@ import './App.css';
 
 function App() {
   const [todoList, setTodoList] = React.useState(['first', 'second']);
-  const addItem = () => setTodoList(todoList.concat(['another'])); 
+  const [value, setValue] = React.useState('');
+  const addItem = () => setTodoList(todoList.concat([value || 'another']));
+
   return (
     <div className="App">
       <header className="App-header">
@@ -12,12 +14,6 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        {
-          todoList.map((item) => {
-            return (<div>{item}</div>);
-          })
-        }
-        <button onClick={addItem}>Add Item</button>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -26,6 +22,13 @@ function App() {
         >
           Learn React
         </a>
+        {
+          todoList.map((item) => {
+            return (<div>{item}</div>);
+          })
+        }
+      <button onClick={addItem}>Add item</button>
+      <input type='text' onChange={(event) => setValue(event.target.value)} value={value} />
       </header>
     </div>
   );
