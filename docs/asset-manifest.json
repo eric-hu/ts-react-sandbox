@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/ts-react-sandbox/static/css/main.5f361e03.chunk.css",
-    "main.js": "/ts-react-sandbox/static/js/main.17bda828.chunk.js",
-    "main.js.map": "/ts-react-sandbox/static/js/main.17bda828.chunk.js.map",
+    "main.js": "/ts-react-sandbox/static/js/main.5e9dd5c0.chunk.js",
+    "main.js.map": "/ts-react-sandbox/static/js/main.5e9dd5c0.chunk.js.map",
     "runtime-main.js": "/ts-react-sandbox/static/js/runtime-main.83db7e5b.js",
     "runtime-main.js.map": "/ts-react-sandbox/static/js/runtime-main.83db7e5b.js.map",
-    "static/js/2.f368dc83.chunk.js": "/ts-react-sandbox/static/js/2.f368dc83.chunk.js",
-    "static/js/2.f368dc83.chunk.js.map": "/ts-react-sandbox/static/js/2.f368dc83.chunk.js.map",
+    "static/js/2.49e709c0.chunk.js": "/ts-react-sandbox/static/js/2.49e709c0.chunk.js",
+    "static/js/2.49e709c0.chunk.js.map": "/ts-react-sandbox/static/js/2.49e709c0.chunk.js.map",
     "index.html": "/ts-react-sandbox/index.html",
-    "precache-manifest.793e901895bdbb152d5a57a3f8c3369e.js": "/ts-react-sandbox/precache-manifest.793e901895bdbb152d5a57a3f8c3369e.js",
+    "precache-manifest.c46c91de3285e09b0570219c73491897.js": "/ts-react-sandbox/precache-manifest.c46c91de3285e09b0570219c73491897.js",
     "service-worker.js": "/ts-react-sandbox/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/ts-react-sandbox/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.f368dc83.chunk.js.LICENSE.txt": "/ts-react-sandbox/static/js/2.f368dc83.chunk.js.LICENSE.txt",
+    "static/js/2.49e709c0.chunk.js.LICENSE.txt": "/ts-react-sandbox/static/js/2.49e709c0.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/ts-react-sandbox/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.83db7e5b.js",
-    "static/js/2.f368dc83.chunk.js",
+    "static/js/2.49e709c0.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.17bda828.chunk.js"
+    "static/js/main.5e9dd5c0.chunk.js"
   ]
 }
