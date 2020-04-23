@@ -1,11 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+interface TodoItem {
+  isDone: boolean;
+  description: string;
+}
+
+function TodoListItem({ item }: { item: TodoItem }) {
+  const [checked, setChecked] = React.useState(item.isDone);
+  const toggleDone = () => setChecked(!checked);
+  return (
+    <div key={item.description}>
+      <input type="checkbox" checked={checked} onClick={toggleDone} />
+      <span>{item.description}</span>
+    </div>
+  );
+}
 
 function App() {
-  const [todoList, setTodoList] = React.useState(['first', 'second']);
-  const [value, setValue] = React.useState('');
-  const addItem = () => setTodoList(todoList.concat([value || 'another']));
+  const [todoList, setTodoList] = React.useState<TodoItem[]>([
+    { isDone: false, description: "first" },
+    { isDone: true, description: "second" }
+  ]);
+  const [value, setValue] = React.useState("");
+  const addItem = () =>
+    setTodoList(
+      todoList.concat([{ isDone: false, description: value || "another" }])
+    );
 
   return (
     <div className="App">
@@ -22,13 +44,15 @@ function App() {
         >
           Learn React
         </a>
-        {
-          todoList.map((item) => {
-            return (<div>{item}</div>);
-          })
-        }
-      <button onClick={addItem}>Add item</button>
-      <input type='text' onChange={(event) => setValue(event.target.value)} value={value} />
+        {todoList.map(item => {
+          return <TodoListItem item={item} />;
+        })}
+        <button onClick={addItem}>Add item</button>
+        <input
+          type="text"
+          onChange={event => setValue(event.target.value)}
+          value={value}
+        />
       </header>
     </div>
   );
