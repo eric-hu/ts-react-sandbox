@@ -7,11 +7,22 @@ interface TodoItem {
   description: string;
 }
 
+// Making TodoItem a global var instead of a block scope let means it will
+// persist beyond one React render cycle.
+var globalTodoList: TodoItem[] = [
+  { isDone: false, description: "first" },
+  { isDone: true, description: "second" }
+];
+
 function TodoListItem({ item }: { item: TodoItem }) {
   const [checked, setChecked] = React.useState(item.isDone);
-  const toggleDone = () => setChecked(!checked);
+  const toggleDone = () => {
+    item.isDone = !item.isDone;
+    setChecked(item.isDone);
+  };
+
   return (
-    <div key={item.description}>
+    <div key={item.description + Math.random()}>
       <input type="checkbox" checked={checked} onClick={toggleDone} />
       <span>{item.description}</span>
     </div>
@@ -19,15 +30,24 @@ function TodoListItem({ item }: { item: TodoItem }) {
 }
 
 function App() {
-  const [todoList, setTodoList] = React.useState<TodoItem[]>([
-    { isDone: false, description: "first" },
-    { isDone: true, description: "second" }
-  ]);
+  const [todoList, setTodoList] = React.useState<TodoItem[]>(globalTodoList);
   const [value, setValue] = React.useState("");
-  const addItem = () =>
-    setTodoList(
-      todoList.concat([{ isDone: false, description: value || "another" }])
-    );
+
+  const clearDone = () => {
+    globalTodoList = globalTodoList.filter(item => !item.isDone);
+    setTodoList(globalTodoList);
+  };
+
+  const addItem = () => {
+    globalTodoList = globalTodoList.concat([
+      { isDone: false, description: value || "another" }
+    ]);
+    setValue("");
+
+    setTodoList(globalTodoList);
+  };
+
+  console.log("todoList: ", globalTodoList);
 
   return (
     <div className="App">
@@ -44,15 +64,16 @@ function App() {
         >
           Learn React
         </a>
-        {todoList.map(item => {
-          return <TodoListItem item={item} />;
-        })}
+        {todoList.map(item => (
+          <TodoListItem item={item} />
+        ))}
         <button onClick={addItem}>Add item</button>
         <input
           type="text"
           onChange={event => setValue(event.target.value)}
           value={value}
         />
+        <button onClick={clearDone}>Clear done</button>
       </header>
     </div>
   );
