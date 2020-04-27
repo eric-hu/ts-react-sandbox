@@ -22,7 +22,7 @@ function TodoListItem({ item }: { item: TodoItem }) {
   };
 
   return (
-    <div key={item.description + Math.random()}>
+    <div>
       <input type="checkbox" checked={checked} onClick={toggleDone} />
       <span>{item.description}</span>
     </div>
@@ -65,7 +65,7 @@ function App() {
           Learn React
         </a>
         {todoList.map(item => (
-          <TodoListItem item={item} />
+          <TodoListItem item={item} key={item.description + Math.random()} />
         ))}
         <button onClick={addItem}>Add item</button>
         <input
