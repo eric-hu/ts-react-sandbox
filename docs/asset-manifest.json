@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ts-react-sandbox/static/css/main.5f361e03.chunk.css",
-    "main.js": "/ts-react-sandbox/static/js/main.e529f342.chunk.js",
-    "main.js.map": "/ts-react-sandbox/static/js/main.e529f342.chunk.js.map",
+    "main.js": "/ts-react-sandbox/static/js/main.2fddd1ff.chunk.js",
+    "main.js.map": "/ts-react-sandbox/static/js/main.2fddd1ff.chunk.js.map",
     "runtime-main.js": "/ts-react-sandbox/static/js/runtime-main.83db7e5b.js",
     "runtime-main.js.map": "/ts-react-sandbox/static/js/runtime-main.83db7e5b.js.map",
     "static/js/2.49e709c0.chunk.js": "/ts-react-sandbox/static/js/2.49e709c0.chunk.js",
     "static/js/2.49e709c0.chunk.js.map": "/ts-react-sandbox/static/js/2.49e709c0.chunk.js.map",
     "index.html": "/ts-react-sandbox/index.html",
-    "precache-manifest.4e6c35f2b044b24766687eb6f70a8fbf.js": "/ts-react-sandbox/precache-manifest.4e6c35f2b044b24766687eb6f70a8fbf.js",
+    "precache-manifest.4458eca26d472a504bd024d1d4916256.js": "/ts-react-sandbox/precache-manifest.4458eca26d472a504bd024d1d4916256.js",
     "service-worker.js": "/ts-react-sandbox/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/ts-react-sandbox/static/css/main.5f361e03.chunk.css.map",
     "static/js/2.49e709c0.chunk.js.LICENSE.txt": "/ts-react-sandbox/static/js/2.49e709c0.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.83db7e5b.js",
     "static/js/2.49e709c0.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.e529f342.chunk.js"
+    "static/js/main.2fddd1ff.chunk.js"
   ]
 }
