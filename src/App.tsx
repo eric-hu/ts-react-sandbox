@@ -14,6 +14,14 @@ var globalTodoList: TodoItem[] = [
   { isDone: true, description: "second" }
 ];
 
+const addToTodoList = (value: string) => {
+  globalTodoList = globalTodoList.concat([
+    { isDone: false, description: value || "another" }
+  ]);
+};
+
+const clearDoneItems = () => globalTodoList = globalTodoList.filter(item => !item.isDone);
+
 function TodoListItem({ item }: { item: TodoItem }) {
   const [checked, setChecked] = React.useState(item.isDone);
   const toggleDone = () => {
@@ -34,20 +42,16 @@ function App() {
   const [value, setValue] = React.useState("");
 
   const clearDone = () => {
-    globalTodoList = globalTodoList.filter(item => !item.isDone);
+    clearDoneItems();
     setTodoList(globalTodoList);
   };
 
   const addItem = () => {
-    globalTodoList = globalTodoList.concat([
-      { isDone: false, description: value || "another" }
-    ]);
+    addToTodoList(value);
     setValue("");
 
     setTodoList(globalTodoList);
   };
-
-  console.log("todoList: ", globalTodoList);
 
   return (
     <div className="App">
